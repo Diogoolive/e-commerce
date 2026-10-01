@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Minha Loja</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .auth-container {
+            max-width: 400px;
+            margin: 60px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .auth-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .form-group input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .btn-submit:hover {
+            background-color: #218838;
+        }
+        .auth-links {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .auth-links a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .auth-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-container">
+        <h2>Criar Nova Conta</h2>
+        
+        <!-- O ID signup-form é capturado pelo script.js -->
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="signup-name">Nome Completo:</label>
+                <input type="text" id="signup-name" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="signup-email">E-mail:</label>
+                <input type="email" id="signup-email" placeholder="seuemail@exemplo.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="signup-password">Senha:</label>
+                <input type="password" id="signup-password" placeholder="Digite uma senha segura" required>
+            </div>
+
+            <button type="submit" class="btn-submit">Cadastrar</button>
+        </form>
+
+        <div class="auth-links">
+            <p>Já possui uma conta? <a href="login.html">Faça login aqui</a></p>
+            <p><a href="index.html">← Voltar para a Loja</a></p>
+        </div>
+    </div>
+
+    <!-- Script principal com a lógica do formulário e da API -->
+    <script src="js/script.js"></script>
+</body>
+</html>

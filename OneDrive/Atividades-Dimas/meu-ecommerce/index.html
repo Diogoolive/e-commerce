@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja de E-commerce</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Minha Loja</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    
+                    <li class="drop-hover"><a href="#">Produtos <i class="bi bi-caret-down-fill"></i></a>
+                        <div class="drop">
+                            <a href="#">Informática</a>
+                            <a href="#">Vestuários</a>
+                            <a href="#">Celulares</a>
+                            <a href="#">Eletrodomésticos</a>
+                        </div>
+                    </li>       
+
+                    <!-- MENU ADMIN -->
+                    <li id="nav-admin" class="drop-hover hidden">
+                        <a href="#">Administração <i class="bi bi-caret-down-fill"></i></a>
+                        <div class="drop">
+                            <a href="#">Manutenção de Produtos</a>
+                            <a href="#">Manutenção de Usuários</a>                            
+                        </div>                    
+                    </li>
+                    
+                    <!-- CARRINHO -->
+                    <li>
+                        <a href="#" id="cart-btn" class="cart-link">
+                            🛒 Carrinho <span id="cart-count">0</span>
+                        </a>
+                    </li>
+
+                    <!-- USUÁRIO LOGADO -->
+                    <li class="auth-logged-in hidden">
+                        <span id="user-greeting" style="color: white; font-weight: bold; padding: 0 10px;"></span>
+                    </li>
+                    <li class="auth-logged-in hidden">
+                        <button id="btn-logout" class="btn-logout">Sair</button>
+                    </li>
+                    
+                    <!-- USUÁRIO DESLOGADO -->
+                    <li class="auth-logged-out"><a href="login.html" class="btn-login">Login</a></li>
+                    <li class="auth-logged-out"><a href="cadastro.html" class="btn-cadastro">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-banner">
+            <div class="container">
+                <h1>Ofertas Imperdíveis!</h1>
+                <p>Confira nossa nova coleção de produtos exclusivos.</p>
+                <a href="#" class="btn">Compre Agora</a>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Produtos em Destaque</h2>
+                <div class="product-grid">
+                    
+                    <div class="product-card">
+                        <img src="images/tenis1.webp" alt="Tênis masculino Free Bold">
+                        <h3>Tênis masculino Free Bold</h3>
+                        <p class="price">R$ 99,90</p>
+                        <button class="btn-add" data-id="1" data-name="Tênis masculino Free Bold" data-price="99.90">Adicionar ao Carrinho</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/tenis2.webp" alt="Tênis masculino Free Bold">
+                        <h3>Tênis masculino Free Bold</h3>
+                        <p class="price">R$ 149,90</p>
+                        <button class="btn-add" data-id="2" data-name="Tênis masculino Free Bold" data-price="149.90">Adicionar ao Carrinho</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/tenis2.webp" alt="Tênis masculino Free Bold">
+                        <h3>Tênis masculino Free Bold</h3>
+                        <p class="price">R$ 199,90</p>
+                        <button class="btn-add" data-id="3" data-name="Tênis masculino Free Bold" data-price="199.90">Adicionar ao Carrinho</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Meu Carrinho de Compras</h2>
+                <span id="close-cart" class="close-btn">&times;</span>
+            </div>
+            <div id="cart-items" class="modal-body"></div>
+            <div class="modal-footer">
+                <div class="cart-total">
+                    <strong>Total: </strong><span id="cart-total-price">R$ 0,00</span>
+                </div>
+                <button id="clear-cart-btn" class="btn-clear">Esvaziar Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Minha Loja de E-commerce. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

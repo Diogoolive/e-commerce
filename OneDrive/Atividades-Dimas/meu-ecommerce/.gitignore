@@ -1,0 +1,9 @@
+.venv
+venv
+/__pycache__/
+/__pycache__
+__pycache__
+.jpg
+node_modules
+package.json
+package-lock.json
